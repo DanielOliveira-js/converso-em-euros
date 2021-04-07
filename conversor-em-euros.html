@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor em Euros</title>
+    <style>
+        body {
+            font: normal 20px arial;
+            color: white;
+            background: url('https://i.gifer.com/8GcR.gif');
+            text-align: center;
+        }
+
+        input {
+            font: normal 20px arial;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor em Euros</h1>
+    <p>Digite algum valor em reais para que possa ser convertido em euros!</p>
+    <input type="number" name="conv" id="conv">
+    <input type="button" value="converter" onclick="converter()">
+    <div>O resultado irá aparecer acima!</div>
+</body>
+
+<script>
+    function converter() {
+        let conv = document.getElementById('conv');
+        let val = Number(conv.value);
+        let calc = val * 6.66;
+        alert(`O valor de R$ ${val} é igual a ${calc} €!`);
+    };
+</script>
+
+</html>
